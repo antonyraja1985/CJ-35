@@ -13,7 +13,7 @@ public class Test {
 //		
 //		b.move();
 		
-		Vechichle v=new Bike();
+		Vechichle v=new Flight();
 		v.move();
 		
 		
