@@ -1,6 +1,6 @@
 package abstractclass;
 
-public abstract class AbstractClassExample {
+public abstract class AbstractClassExample extends Object {
 	
 	public void add() {
 		

@@ -16,7 +16,11 @@ public class Client extends AbstractClassExample {
 		c.add();
 		c.sub();
 		
+		System.out.println(c);
+		
 	}
+	
+
 
 	
 	

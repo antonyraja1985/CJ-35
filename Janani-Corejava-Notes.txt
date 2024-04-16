@@ -1,0 +1,948 @@
+Abstraction
+=====================================
+the process showing essential features to end users by hiding implementation details is called abstraction
+
+we will design abstraction in two ways
+=======================================
+abstract class
+interface
+
+Abstract class
+========================================
+1. the class which is declared with 'abstract' keyword is abstract class
+2. abstract class contains only  complete methods.
+3. abstract class contains only incomplete methods.
+4. abstract class contains both complete methods and incomplete methods
+5. we can not create object for abstract class by developer
+
+Complete methods?
+========================================
+the method with body is called complete method
+       
+       Example: public void add(){}
+
+InComplete methods or Abstract method?
+========================================
+1.the method without body is called Incomplete method
+2.if method ends with semicolen is called incomple method or abstract method
+
+3. if method declared with abstract keyword is called abstract method 
+
+       
+       Example: public void sub();
+
+ Concrete class -Vs- Abstract Class
+ =======================================
+
+ Concrete class
+ =====================
+ Concrete class is class which is doesent declared with 'abstract' keyword
+
+Abstract Class
+ =====================
+The class which is declared with 'abstract' keyword is abstract class
+
+ Concrete class -Vs- Abstract Class
+ ===================================
+ 1. concrete class contains only completed methods
+ 2. Abstract class contains only completed methods as well as incompleted methods
+ 3. we can create object for concrete class
+ 4. we can not create object for abstract class by developer
+ 5. designing sub class is mandatory for abstract class
+
+
+Dis Advantages of Abtract Class
+===========================================
+
+we cant achive abtraction 100% using abstract class
+
+
+can we create constructor for abstract class ?
+================================================
+yes
+
+who will call the abstract class constructor?
+================================================
+sub class
+
+can we create instance variable in abstract class?
+==================================================
+
+yes
+
+can we create parameter constructor for abstract class ?
+=========================================================
+yes
+
+
+
+Interface
+=========================================================
+syntax: public interface Infosys{}
+=========================================================
+
+1. interface contains only incomplete methods or abstract methods
+2. using 'abstract ' keyword for incomplete method is optional
+3. interface does not allow instance variable
+4. interface allow constants
+5. we can define constants by using 'final keyword'
+6. we cant create object for interface
+7. interface does not allow constructor
+8. 'final' and 'static' is optional interface
+    Example
+    ============================================
+      int accNo=1245;
+
+      final static int accNo=1245;
+   ============================================
+
+9.if you want to use interface implementation class is Must
+10.if there is not implementation class interface is useless
+11. we can call constants into implementation class without object
+
+
+Oops summary
+==============================
+inheritance
+    --single inheritance
+    --multilevel inheritance
+    --heirarchy inheritance
+ploymorphism
+    --compile time polymorphism(method overloading)
+    --runtime polymorphism (method  overriding)
+Encapsulation:
+    --variables must be private
+    --getter and setter
+    --also called POJO(plain old java object)
+Anstraction:
+      abstract class
+      interface
+
+Note:
+=============
+Java does not support multiple inheritance using class
+
+[public class Janani extends InfoSys, InsInfosys ]--not possible
+
+Java can support multiple inheritance using interface
+
+[public class Antony implements Infosys, InsInsurance {}]--possible
+
+===================================================================
+implementation classes
+loosely coupling
+===================================================================
+
+Implementation classes:
+=========================
+
+if you want to use interface we must implement in class, that interface implemented class is called Implementation class
+
+example:
+=============================================
+
+public interface vehichle{
+       
+       public void move();
+}
+
+
+public class Car implements vechichle{
+       public void move(){
+
+       }
+
+}
+
+======================================
+
+
+coupling
+======================================
+
+if one class uses another class that is called coupling
+
+uses cases:
+======================================
+1. while creating a complex java application the logic of one class will call another class logic to provide the same service to the clents
+
+2.if one class calling another class logic then it is called collabration
+
+3.when one class is collabrating with another class then there is exist a tight coupling between the two classes
+
+Types of coupling
+====================================================
+1. tight coupling
+2. looseley coupling
+
+
+
+Example for Tight Coupling
+=====================================================
+
+
+Example for loosely Coupling
+=====================================================
+
+
+Notes:Dependency injection
+
+Spring boot(loosely coupling architectue)
+
+===============================================================
+
+Association in Java
+========================================
+1.Association is relation between two separate classes which establish through their object
+2.Association can be One-to-One, One-to-many, many-to-one, many-to-many
+
+Two Types of Association
+=======================================
+1.Aggregation(HAS-A -weak relationship)
+2.Composition(HAS-A -strong relationship)
+
+Example for Aggregation( HAS-A -weak relationship)
+=======================================
+
+1.Aggregati is a type of association
+2.Aggrgation is maintain HAS-A relationship(weak) between two classes
+
+       a. A department has employee
+       b. An employee can belongs ro one or more departments
+       c. if the department is deleted, the employee still exist
+       d. Employee can be transfered between departments -or- even
+          workin multiple departments in simultaniusly
+
+Department-whole
+Employee-Part
+
+Example for Composition (HAS-A -strong relationship)
+====================================================
+
+  a. A Car has Engine       
+  b. if the Car is deleted, there is no use Engine
+      
+Car-whole
+Engine-Part
+
+=================================================================
+
+
+What is String in Java?
+=================================================================
+1. In Java String is Sequance of charector
+2. In Java Strings are treated as object
+3. String is a pre-defined class, belongs [java.lang package]
+4. String is a Final Class, sub class cannot extends String Class
+5. String object is immutable
+6. we can declare and initialize String in Java using double  quotes["Hi"]
+
+We can create object for String java in Two Ways
+================================================================
+1.String literals
+2.Using new Keyword
+
+1.String literals
+================================================================
+
+1. if you create string object using literals object will create in 
+String constant pool
+
+String constant pool:
+================================================================
+1. Java maintains a special memeory area called string constant pool(SCP) for storing storing string literals
+
+2.java automatically reuses them if they already exist
+
+3. SCP helps conserve memory and improve performance
+
+
+2.Using new Keyword
+================================================================
+
+1. if you create string object using new operator object will create in 
+heap memory
+===============================================================
+
+
+
+
+What is StringBuffer In Java?
+=============================================================
+1.StringBuffer is a predefine class
+
+2.StringBuffer is used to manipulate the string
+
+3.It is a thread safety
+
+4.StringBuffer is a mutable class
+
+What is StringBuilder In java?
+==================================================
+1.StringBuilder is a predefine class
+
+2.StringBuilder is used to manipulate the string
+
+3.It is a not-thread safety
+
+4.StringBuilder is a mutable class
+
+
+StringBuffer -vs- StringBuilder
+================================================
+
+StringBuilder performence is better than StringBuffer
+
+String Operations Example For Manipulation
+===============================================================
+
+0.charAt();
+1.concate()
+2.length();
+3.startsWith();
+4.endsWith();
+5.split();
+6.indexOf();
+7.charAt();
+8.toUpperCase();
+9.toLowerCase();
+10.equals();
+11.contains();
+12.trim();
+
+
+=====================================================================
+public final class String extends Object
+implements Serializable, Comparable<String>, CharSequence
+
+=====================================================================
+
+Arrays In Java
+===========================
+1. Array is data structure that allows to store multiple values of the same data type under single varaible
+
+Array Declaration
+==========================
+1. To create Array , first need to declare it
+
+              type[] arrayName;
+=======================================================
+              byte[] byteArray;
+              short[] shortArray;
+              int[] intArray;
+              float[] floatArray;
+              double[] doubleArray;
+              long[] longArray;
+              boolean[] booleanArray;
+              char[] charArray;
+
+
+Array initialization
+============================================
+
+1. using new keyword we can intialize the Array
+
+              byte[] byteArray=new byte[5];
+              short[] shortArray=new byte[5];
+              int[] intArray=new byte[5];;
+              float[] floatArray=float[5];
+              double[] doubleArray=double[6];
+              long[] longArray=long[5];
+              boolean[] booleanArray= boolean[5];
+              char[] charArray=char[5] ;
+              String[] stringArray=new String[5];
+
+Approach-2
+====================================================
+
+String[] name={"janani", "vijay"};
+name={"janani", "vijay"};
+
+String[] stringArray=new String[5];
+
+stringArray[0]="janani";
+stringArray[1]="vijay";
+stringArray[2]="vijay";
+stringArray[3]="vijay";
+stringArray[4]="vijay";
+stringArray[5]="raja";
+
+int[] numbers={10,25,35};
+
+int[] numbers=new int[5];
+
+numbers[0]=10;
+
+
+Accessing elements
+===============================================
+1. you can access elements from  array using square bracket-[];
+
+example;
+int[] numbers={10,25,35};
+
+System.out.printLn(numbers[0]);
+
+
+Iteratiting Arrays
+================================================
+if a array contains bulk records we can use for loop and for each to
+iterate the elements
+
+
+
+String name; //declaration 
+name="janani";//initialation or definition 
+
+================================================
+
+Exception In Java
+================================================
+
+1.Exception is an event that distrupts normal flow of the program
+2.To overcome this issue we can use Exception handling mechanism
+
+Exception handling Tool
+===============================================
+
+try
+
+catch
+
+throws
+
+throw
+
+finally
+
+final vs finally vs finalize
+================================================
+
+final:
+=========
+1. final is a keyword, we can use it in class, method, variable
+2. if class is final we can not extend it
+3. if method is final cannot overide it
+4. if variable is final cannot modified
+
+finally:
+==========
+1. finally is a block
+2. in a program whether exception is handled or not finally block we executed
+
+finalize()
+===========
+1. finalize is a method from Obect class
+2. finalize() method will execute when grabage collector is executed
+
+
+
+e.printStackTrace(); -vs- System.out.println(e);
+=====================================================
+
+e.printStackTrace();- it will print exceptions detailed
+
+System.out.println(e);-It will print only exception message
+
+TestCase-1: Multiple Exceptions
+==========================================================
+1. if you want handle Multiple Exceptions we can use multiple catch  block
+
+Throws
+==============================
+
+1.Throws is a keyword
+2.Throws keyword is used to handle the exception excepliciy
+3.we can use throws keyword only in method signature
+
+Throw
+===============================
+
+1.throw keyword is used to create artificial excepetion
+2.we can use throw keyword only inside the method
+
+Finally
+===============================
+1. finally is a keyword
+2. finally is a block -{}
+3. whether exception is handled or not finally block will be executed
+
+
+
+
+What is Object Class in Java?
+===============================================
+1. Obeject is base class of all java user defined and predefined classes
+
+
+Collections in java?
+==============================================
+1.Why we need to go for collections
+2.What is collection framework
+3.Collections Hierarchy
+4.List interface & Implementation Classes
+5.Set interface & Implementation Classes
+6.Queue interface & Implementation Classes
+7.Map interface & Implementation Classes
+8.Cursors
+9.Collections Sorting
+=============================================
+
+1.Why we need to go for collections
+============================================
+variables:
+==========
+ Varaibles are used to store the data
+
+data type
+========= 
+
+       1.Primitive data types
+              a.byte
+              b.short
+              c.int
+              d.long
+              e.float
+              f.double
+              g.char
+              h.boolean
+
+       2.Refrenced data types
+
+              a.Array
+              b.String
+              c.Class 
+
+int a=10;
+int b=20;
+int c=20;
+
+i want to store 1000 values?---i need to create 1000 varaibles
+i want to store 10000 values?---i need to create 10000 varaibles
+
+To overcome this issues array came into picture
+
+==================
+Arrays-Approach-1
+=================
+We can store group of values in single variable
+
+     int[] a=new int[5];
+
+     a[0]=10;
+     a[1]=20;
+     a[2]=30;
+     a[3]=40;
+     a[4]=50;
+==================
+Arrays-Approach-2
+=================
+Object[] s = new Object[5];
+              s[0] = new Student("Antony", 1001);
+              s[1] = new Student("Janani", 1002);
+              s[2] = new Student("raja", 1003);
+              s[3] = new Employee("vijay", 1004);
+              s[4] = new Student("tony", 1005);
+
+Drawbacks of array
+==================================
+1.Array size is fixed
+2.Array store same data types only
+2.if you want to store different data types we can create Object[] array
+
+
+To overcome this issues Collections came into picture
+=================================================================
+1. Collections are used to store group of objects/values
+2. Collections are growable in nature
+  (Dynamically collections size can be increased and decreased based on data)
+3. We can store any type of data in collections
+   (homogeneous & hetrogeneous)
+4. Collections Providing predefined methods to (insert, update,  delete, retrive)
+
+=================================================================
+Notes: must know implementation classes
+
+2.What is collection framework
+===================================
+1. Colection is entity which is used to store group of objects
+2. Collections are growable in nature
+3. In Collection we can store any type of object/value
+4. Collection framework means set of classes and interfaces
+5. Collection framework providing ready made methods to perform common
+ operation like insert, delete, retrive and sort
+
+3.Collections Hierarchy
+==================================
+0.Collection-(I)
+1.Iterable-(I)
+2.Collection-(I)
+3.List-(I)
+4.Set-(I)
+5.Queue-(I)
+
+6.Map-(I)
+==================================
+
+List: It is used to store group objects(duplicates are allowed)
+Set: It is used to store group objects(duplicates are not allowed)
+Queue:It is used to store group objects(FIFO)
+Map:It is used to store group objects(Key-value pair)
+
+List Interface:
+===================================
+==> It is a child interface of collection interface
+==> list interface having 4 Implementation classes
+       1) ArrayList implements List
+       2) LinkedList implements List
+       3) Vector implements List
+       4) Stack implements List
+
+List list=new List(); invalid
+ArrayList al=new ArrayList(); //valid
+LinkedList ll=new LinkedList();// valid
+Vector v=new Vector();valid //valid
+Stack s=new Stack(); valid //valid
+
+How to use List Interface;
+============================
+List list=new ArrayList();
+List list=new LinkedList();
+List list=new Stack();
+List list=new Vector();
+
+Set:
+===========================
+It is used to store group objects(duplicates are not allowed)
+
+Set Implementation Classes:
+=============================
+1.HashSet
+2.LinkedHashSet
+3.TreeSet
+
+Set s=new Set()// not vaild
+Set s=new HashSet()// valid
+set s=new LinkedHashset()//valid
+Set s=new TreeSet() //valid
+
+Queue:
+===============================
+Queue:It is used to store group objects(FIFO-First In First Out)
+
+Queue Implemenation classes
+===============================
+1.PriorityQueue
+
+
+Queue q=new Queue //not valid
+
+Queue q=new PriorityQueue();
+
+Map:
+==============================
+Map:It is used to store group objects(Key-value pair)
+
+
+Map Implemenation classes
+==============================
+1.Hashtable
+2.HashMap
+3.TreeMap
+
+Map m=new Map(); //not valid
+
+Map m=Hashtable()//valid
+Map m=HashMap() //valid
+Map m=TreeMap() //valid
+
+Cursors:
+========================
+1.Iterator
+2.ListIterator
+3.Enumeration
+=========================
+
+Collection Interface
+============================
+
+1.add(Object obj) : store one object
+2.get(int index):get object from collection using index
+3.remove(int index): remove object
+4.set(int index, Object obj) :insert object using index
+5.indexOf(Object obj): first occurance of object
+5.lastIndexOf(Object obj): last occurance of object
+6.listIterator(): to iterate collection objects
+
+
+List Interface
+===================================
+1.List interface Extending Collection interface
+2.It will maintain objects insertion order
+3.it is having 4 Implementation classes
+
+       1).ArrayList
+       2).LinkedList
+       3).Stack
+       4).Vector
+
+
+List list =new List()//
+
+List list=new ArrayList()
+
+ArrayList:
+================================
+1.Implemention of List interface
+2.Duplicates Objects are allowed
+3.It is maintain insertion order
+4.it is allow null value
+5.internal data structure ArrayList is growable array
+
+
+ArrayList constructors
+===============================
+
+ArrayList list=new ArrayList();
+ArrayList listOne=new ArrayList(50);
+ArrayList listTwo=new ArrayList(list)
+
+
+
+ArrayList Methods
+===============================
+1.add(Object obj)
+2.addAll(Collection c)
+3.remove(Object c)
+4.remove(int index)
+5.get(int index)
+6.contains(object obj)
+7.clear()
+8.isEmpty()
+9.retainAll(Collection c)
+10.indexOf(object obj)
+11.lastIndexOf(object obj)
+12.set(int index, Object obj)
+13.iterator()-->forward direction
+14.listIterator()--forward & backward direction
+
+//Genrics-- <>
+==============================================
+//WrapperClass
+//autoboxing
+//unboxing 
+
+Genrics:
+===========================
+genrics are using to store objects into collections specific data type
+
+WrapperClass
+===========================
+1. we cant to store primitive data types in collections
+
+2. wrapper classes are used to wrap to primitive data types such as
+ byte-Byte
+ short-Short
+ int-Inteager
+ float-Float
+ long-Long
+ double-Double
+ boolean-Boolean
+ char-Charector
+ ===============================================
+ 3.Wrapper 
+
+//autoboxing
+===============================================
+Primitive data can convert into wrapper class Object automatically
+
+
+//unboxing
+===============================================
+wrapper class Object can convert into Primitive data  automatically
+
+       //auto boxing        
+              int a=10;
+              
+              Integer obj=a;
+              System.out.println(obj);
+              
+              int x=obj;
+              //unboxing           
+              System.out.println(x);
+
+
+==========================================================
+ArrayList:  java(1.2)
+=====================
+1.implementation of List Interface
+2.Internal Data structure is Growable Array
+3.Insertion order maintained
+4.duplicate objects are allowed
+5.null objects also allowed
+6.homogenius & hetrogenious data we can store
+7.ArrayList is not Thread safe
+
+LinkedList:
+=====================
+1.implementation of List Interface
+2.Internal Data structure is Double linked list
+3.Insertion order maintained
+4.duplicate objects are allowed
+5.null objects also allowed
+6.homogenius & hetrogenious data we can store
+9.To traverse ArrayListt we can use Iterator,listIterator  as a Cursor
+
+Vector: Java(1.0)
+======================
+1.implementation of List Interface
+2.Internal Data structure is Growable Array
+3.Insertion order maintained
+4.duplicate objects are allowed
+5.null objects also allowed
+6.homogenius & hetrogenious data we can store
+7.Vector is a legacy class
+8.Vector is Thread safe
+9.To traverse vector we can use Enumeration  as a Cursor
+10.Enumeration is called as legacy cursor
+
+
+Stack:
+=============================================
+1.implementation of List Interface
+2.Internal Data Structure of stack is LIFO(last in first out)
+3.It is extending vector class
+
+       push()-->insert object
+       peek()-->to get last object
+       pop()-->to remove last object
+
+==================================================
+ArrayList-------->Growable Array (not thread safe)
+LinkedList------>Double Linked list
+Vector----------->Growable Array(Thread safe)
+Stack---------->L I F O
+
+==================================================
+
+Iterator--->Forward Direction(List & Set)
+ListIterator--->Forward & backward Direction(List)
+Enumaration--->Forward & backward Direction(Legacy Classes)
+=================================================================
+
+Set:
+====================
+
+1. Set is a interface, available in java.util package
+2. Set interface extending Collection interface
+3. Set is used to store group of objects
+4. Duplicate Objects are not allowed
+5. Supports hetrogenious and homogenious
+
+======================================
+Set Implementation Classes
+======================================
+1.HashSet
+2.LinkedHashSet
+3.TreeSet
+
+Set s=new HashSet();
+Set s=new ArrayList(); //not valid
+
+HashSet
+=========================================
+1.Implementation of Set interface
+2.Duplicate objects are not allowed
+3.Null is allowed
+4.insertion order will not be maintained
+5.dafault capacity is 16 (buckets)
+6.default load Factor is 0.75
+7.internal Data structure is Hashtable
+==========================================
+
+LinkedHashSet
+==========================================
+1.Implementation of Set interface
+2.Duplicate objects are not allowed
+3.Null is allowed
+4.insertion order will  be maintained
+5.dafault capacity is 16
+6.default load Factor is 0.75
+7.internal Data structure is Hashtable+LinkedList
+==========================================
+
+TreeSet
+==========================================
+1.Implementation of Set interface
+2.Duplicate objects are not allowed
+3.Null is not allowed
+4.natural sorting order will  be maintained
+5.Homogenious data only allowed
+7.internal Data structure is Binary Tree
+
+Note1:when we add null value in TreeSet it will raise nullpointer exceptiom
+
+Notw2:It supports only homogenious data, if you add hetrogenious data in TreeSet it will raise classcastException
+
+==========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String Task
+===========================================
+1) Reverse a String using Java
+2) Remove Duplicate Characters in String 
+3) Reverse Each word in String
+4) Find Each Characater occurrence in String 
+5) Find First Non Repeated Character in String 
+6) Replace Character with its occurrence in string 
+7) Find Longest Substring without repeated characters
+8) Sort String characters using Java 
+9) Remove Whitespaces in String 
+10) Remove Special Characters in String
+
+
+Git
+=========================================== 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -58,6 +58,7 @@ public class ArrayListIetratorListIterator {
 	    	 System.out.println(listIt.next());
 	     }
 	     System.out.println("=============fetch data-ListIteraor -backward ====================");
+	     
 	     //backward
 		while(listIt.hasPrevious()) {
 			
