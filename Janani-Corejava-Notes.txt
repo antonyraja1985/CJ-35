@@ -885,6 +885,51 @@ Note1:when we add null value in TreeSet it will raise nullpointer exceptiom
 Notw2:It supports only homogenious data, if you add hetrogenious data in TreeSet it will raise classcastException
 
 ==========================================
+==========================================
+Map:
+==========================================
+1.Map is an Interfcae available in java.util.package
+2.Map is used to store the data in key-value format
+3.One key-Value pair is called Entry
+4.One Mape Object can have multiple Entries
+5.In Map Key Should be unique and values can duplicate
+
+Example:Map<key,value> map=new HashMap();
+======================
+Map<Integer,String> map=new HashMap();
+        
+        map.put(101, "antony"); //one entry(key-value pair)
+        map.put(102, "Raja"); //one entry(key-value pair)
+        map.put(103, "Smith"); //one entry(key-value pair)
+
+ Map<String,Integer> mapOne=new HashMap();
+        
+        mapOne.put("antony", 101); //one entry(key-value pair)
+        mapOne.put("Raja",102); //one entry(key-value pair)
+        mapOne.put("Smith", 103); //one entry(key-value pair)
+
+Map Interface implemention classes;
+=======================================
+1.HashMap
+2.LinkedhashMap
+3.TreeMap
+4.Hashtable
+5.IndentihashMap
+6.WeakHashMap
+======================================
+
+Common Operations
+=========================================================
+1.put(K, V) -->To store one entry in map Object
+2.get(K)-->To get value Based On key
+3.remove(K)-->To remove value Based On key
+4.ContainsKey(K)-->to check presence of entry based on key
+5.keySet()-->to get all keyset of map
+6.values()-->to get all values of map
+7.entrySet-->to get all entries of map
+8.clear()-->to remove all entries of map
+9.isEmpty()-->to check whether map object is empty or not
+=========================================================
 
 
 
